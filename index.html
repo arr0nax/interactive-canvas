@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/scripts.js"></script>
+  </head>
+  <body>
+    <div class="row">
+      <button id="showShapes" onclick="showShapes()">Shapes</button>
+      <button id="showImages" onclick="showImages()">Images</button>
+    </div>
+    <div class="row">
+      <button id="showEffects" onclick="showEffects()">Effects</button>
+      <button id="showText" onclick="showText()">Text</button>
+    </div>
+    <div class="input" id="text">
+      <button class="exit" onclick="exit()">X</button>
+      <form id="textInput" action="">
+        <input id="m" autocomplete="off" /><button>Send</button>
+      </form>
+    </div>
+    <div class="input" id="shapes">
+      <button class="exit" onclick="exit()">X</button>
+
+    </div>
+    <div class="input" id="effects">
+      <button class="exit" onclick="exit()">X</button>
+      <form id="effectDuplicate" action=""><button>duplicate</button></form>
+    </div>
+    <div class="input" id="images">
+      <button class="exit" onclick="exit()">X</button>
+      <form id="imageInput" action="">
+        <input id="image_url" autocomplete="off" /><button>Send</button>
+      </form>
+    </div>
+  </body>
+</html>
