@@ -7,35 +7,86 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="/scripts.js"></script>
+    <meta name="viewport" content="width=device-width,user-scalable=no">
   </head>
   <body>
-    <div class="row">
-      <button id="showShapes" onclick="showShapes()">Shapes</button>
-      <button id="showImages" onclick="showImages()">Images</button>
-    </div>
-    <div class="row">
-      <button id="showEffects" onclick="showEffects()">Effects</button>
-      <button id="showText" onclick="showText()">Text</button>
-    </div>
+      <button class="big-button" id="showShapes" onclick="showShapes()">Emoji</button>
+      <button class="big-button" id="showImages" onclick="showImages()">Images</button>
+      <button class="big-button" id="showEffects" onclick="showEffects()">Effects</button>
+      <button class="big-button" id="showText" onclick="showText()">Text</button>
     <div class="input" id="text">
-      <button class="exit" onclick="exit()">X</button>
-      <form id="textInput" action="">
-        <input id="m" autocomplete="off" /><button>Send</button>
-      </form>
+      <button class="exit" onclick="exit()">back</button>
+      <form id="textInput" action=""><input id="m" autocomplete="off" placeholder="write anything!" onfocus="this.value=''"/><button id="send">Send</button></form>
     </div>
     <div class="input" id="shapes">
-      <button class="exit" onclick="exit()">X</button>
-
+      <button class="exit" onclick="exit()">back</button>
+      <div class="small-button-container">
+        <form class="small-button" id="emoji1" action=""><button>🐑</button></form>
+        <form class="small-button" id="emoji2" action=""><button>🤔</button></form>
+        <form class="small-button" id="emoji3" action=""><button>🍆</button></form>
+        <form class="small-button" id="emoji4" action=""><button>🍑</button></form>
+        <form class="small-button" id="emoji5" action=""><button>😘</button></form>
+        <form class="small-button" id="emoji6" action=""><button>😳</button></form>
+        <form class="small-button" id="emoji7" action=""><button>😩</button></form>
+        <form class="small-button" id="emoji8" action=""><button>💻</button></form>
+        <form class="small-button" id="emoji9" action=""><button>🥀</button></form>
+        <form class="small-button" id="emoji10" action=""><button>🌹</button></form>
+        <form class="small-button" id="emoji11" action=""><button>👌</button></form>
+        <form class="small-button" id="emoji12" action=""><button>🗿</button></form>
+        <form class="small-button" id="emoji13" action=""><button>💦</button></form>
+        <form class="small-button" id="emoji14" action=""><button>🌊</button></form>
+        <form class="small-button" id="emoji15" action=""><button>🌎</button></form>
+        <form class="small-button" id="emoji16" action=""><button>🏳️‍🌈</button></form>
+        <form class="small-button" id="emoji17" action=""><button>🙈</button></form>
+        <form class="small-button" id="emoji18" action=""><button>🙉</button></form>
+        <form class="small-button" id="emoji19" action=""><button>💥</button></form>
+        <form class="small-button" id="emoji20" action=""><button>💫</button></form>
+        <form class="small-button" id="emoji21" action=""><button>🦆</button></form>
+        <form class="small-button" id="emoji22" action=""><button>🐙</button></form>
+        <form class="small-button" id="emoji23" action=""><button>🐛</button></form>
+        <form class="small-button" id="emoji24" action=""><button>🦐</button></form>
+        <form class="small-button" id="emoji25" action=""><button>🦀</button></form>
+        <form class="small-button" id="emoji26" action=""><button>🌚</button></form>
+        <form class="small-button" id="emoji27" action=""><button>🌝</button></form>
+        <form class="small-button" id="emoji28" action=""><button>💌</button></form>
+        <form class="small-button" id="emoji29" action=""><button>💾</button></form>
+        <form class="small-button" id="emoji30" action=""><button>💿</button></form>
+        <form class="small-button" id="emoji31" action=""><button>⛓</button></form>
+        <form class="small-button" id="emoji32" action=""><button>⚰</button></form>
+      </div>
     </div>
     <div class="input" id="effects">
-      <button class="exit" onclick="exit()">X</button>
-      <form id="effectDuplicate" action=""><button>duplicate</button></form>
+      <button class="exit" onclick="exit()">back</button>
+      <form class="effect-button" id="effectDuplicate" action=""><button>duplicate</button></form>
+      <form class="effect-button" id="effectRotate" action=""><button>rotate</button></form>
+      <form class="effect-button" id="effectStopRotate" action=""><button>unrotate</button></form>
+      <form class="effect-button" id="effectGravity" action=""><button>gravity</button></form>
+      <form class="effect-button" id="effectStopGravity" action=""><button>float</button></form>
+      <form class="effect-button" id="effectScaleUp" action=""><button>bigger</button></form>
+      <form class="effect-button" id="effectScaleDown" action=""><button>smaller</button></form>
     </div>
     <div class="input" id="images">
-      <button class="exit" onclick="exit()">X</button>
-      <form id="imageInput" action="">
-        <input id="image_url" autocomplete="off" /><button>Send</button>
-      </form>
+      <button class="exit" onclick="exit()">back</button>
+      <div class="medium-button-container">
+        <form class="medium-button" id="image1" action=""><button>boticelli</button></form>
+        <form class="medium-button" id="image2" action=""><button>dali</button></form>
+        <form class="medium-button" id="image3" action=""><button>davinci</button></form>
+        <form class="medium-button" id="image4" action=""><button>hokusai</button></form>
+        <form class="medium-button" id="image5" action=""><button>monet</button></form>
+        <form class="medium-button" id="image6" action=""><button>picasso</button></form>
+        <form class="medium-button" id="image7" action=""><button>munch</button></form>
+        <form class="medium-button" id="image8" action=""><button>meh cat</button></form>
+        <form class="medium-button" id="image9" action=""><button>attack cat</button></form>
+        <form class="medium-button" id="image10" action=""><button>surprise cat</button></form>
+        <form class="medium-button" id="image11" action=""><button>lazy cat</button></form>
+        <form class="medium-button" id="image12" action=""><button>classic sheep</button></form>
+        <form class="medium-button" id="image13" action=""><button>happy sheep</button></form>
+        <form class="medium-button" id="image14" action=""><button>chimp</button></form>
+        <form class="medium-button" id="image15" action=""><button>shrek</button></form>
+        <form class="medium-button" id="image16" action=""><button>mike</button></form>
+        <form class="medium-button" id="image17" action=""><button>krey</button></form>
+        <form class="medium-button" id="image18" action=""><button>nut</button></form>
+      </div>
     </div>
   </body>
 </html>
