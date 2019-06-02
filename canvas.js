@@ -1,6 +1,7 @@
 var messages = [];
 var dorotate = false;
 var gravity = false;
+var maspeed = 1;
 var mascale = 1;
 let boticelli;
 let dali;
@@ -60,8 +61,10 @@ $(function () {
     } else if (effect === 'stop_rotate') { dorotate = false;
     } else if (effect === 'gravity') { gravity = true;
     } else if (effect === 'stop_gravity') { gravity = false;
-    } else if (effect === 'scale_up') { mascale += .1;
-    } else if (effect === 'scale_down') { mascale -= .1;
+    } else if (effect === 'scale_up') { (mascale < 12) ? ( mascale += .1 ) : null; console.log(mascale);
+    } else if (effect === 'scale_down') { (mascale > 0.2) ? (mascale -= .1) : null;
+    } else if (effect === 'speed_up') { maspeed += .1;
+    } else if (effect === 'speed_down') { (maspeed > 0.2) ? (maspeed -= .1) : null;
     }
   });
   socket.on('image', function(name){
@@ -96,7 +99,7 @@ function setup() {
 
 function draw() {
   // background(255/2*sin(frameCount/110)+255/2,255/2*sin(frameCount/120)+255/2, 255/2*sin(frameCount/130)+255/2);
-  if (messages.length === 0) messages.push(new Message('LONG DISTANCE HUSBAND'))
+  if (messages.length === 0) reset();
   drawMessages();
 }
 
@@ -113,10 +116,10 @@ function drawMessages() {
       text(messages[i].text, messages[i].position.x, messages[i].position.y);
     } else if (messages[i].type === 'image') {
       if (dorotate) rotate((frameCount / 1500) % PI);
-      image(messages[i].img, messages[i].position.x, messages[i].position.y, messages[i].img.width * (150/messages[i].img.height) * mascale, 150 * mascale);
+      image(messages[i].img, messages[i].position.x, messages[i].position.y, messages[i].img.width * (120/messages[i].img.height) * mascale, 120 * mascale);
     }
-    messages[i].position.y = messages[i].position.y + (gravity ? 0.5 : messages[i].velocity.y);
-    messages[i].position.x = messages[i].position.x + (gravity ? 0 : messages[i].velocity.x);
+    messages[i].position.y = messages[i].position.y + (gravity ? 0.5 : messages[i].velocity.y * maspeed);
+    messages[i].position.x = messages[i].position.x + (gravity ? 0 : messages[i].velocity.x * maspeed);
     if (messages[i].position.y > windowHeight + 100 || messages[i].position.y < -100 || messages[i].position.x > windowWidth + 100 || messages[i].position.x < -100) {
       messages.splice(i, 1);
     }
@@ -182,4 +185,12 @@ function sinColor2() {
     g: (255/2*sin((frameCount)/130)+255/2),
     b: (255/2*sin((frameCount)/140)+255/2)
   }
+}
+
+function reset() {
+  messages.push(new Message('LONG DISTANCE HUSBAND'));
+  dorotate = false;
+  mascale = 1;
+  gravity = false;
+  maspeed = 1;
 }

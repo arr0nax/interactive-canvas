@@ -16,6 +16,8 @@ $(function () {
   $('#effectStopGravity').submit(function(e){e.preventDefault();socket.emit('effect', 'stop_gravity');return false;});
   $('#effectScaleUp').submit(function(e){e.preventDefault();socket.emit('effect', 'scale_up');return false;});
   $('#effectScaleDown').submit(function(e){e.preventDefault();socket.emit('effect', 'scale_down');return false;});
+  $('#effectSpeedUp').submit(function(e){e.preventDefault();socket.emit('effect', 'speed_up');return false;});
+  $('#effectSpeedDown').submit(function(e){e.preventDefault();socket.emit('effect', 'speed_down');return false;});
   $('#imageInput').submit(function(e){
     e.preventDefault(); // prevents page reloading
     socket.emit('image', $('#image_url').val());
@@ -37,7 +39,7 @@ $(function () {
   $('#emoji13').submit(function(e){e.preventDefault();socket.emit('message', '💦');return false;});
   $('#emoji14').submit(function(e){e.preventDefault();socket.emit('message', '🌊');return false;});
   $('#emoji15').submit(function(e){e.preventDefault();socket.emit('message', '🌎');return false;});
-  $('#emoji16').submit(function(e){e.preventDefault();socket.emit('message', '🏳');return false;});
+  $('#emoji16').submit(function(e){e.preventDefault();socket.emit('message', '🌈');return false;});
   $('#emoji17').submit(function(e){e.preventDefault();socket.emit('message', '🙈');return false;});
   $('#emoji18').submit(function(e){e.preventDefault();socket.emit('message', '🙉');return false;});
   $('#emoji19').submit(function(e){e.preventDefault();socket.emit('message', '💥');return false;});
@@ -51,7 +53,7 @@ $(function () {
   $('#emoji27').submit(function(e){e.preventDefault();socket.emit('message', '🌝');return false;});
   $('#emoji28').submit(function(e){e.preventDefault();socket.emit('message', '💌');return false;});
   $('#emoji29').submit(function(e){e.preventDefault();socket.emit('message', '💾');return false;});
-  $('#emoji30').submit(function(e){e.preventDefault();socket.emit('message', '💿');return false;});
+  $('#emoji30').submit(function(e){e.preventDefault();socket.emit('message', '🏝');return false;});
   $('#emoji31').submit(function(e){e.preventDefault();socket.emit('message', '⛓');return false;});
   $('#emoji32').submit(function(e){e.preventDefault();socket.emit('message', '⚰');return false;});
   $('#image1').submit(function(e){e.preventDefault();socket.emit('image', 'boticelli');return false;});

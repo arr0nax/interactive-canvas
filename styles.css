@@ -58,8 +58,9 @@ button {
 }
 
 .effect-button button {
-  font-size: 6vh;
-  height: 7vh;
+  /* font-size: 6vh; */
+  /* height: 7vh; */
+  float: left;
 }
 
 #textInput {
