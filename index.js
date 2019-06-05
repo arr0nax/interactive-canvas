@@ -6,6 +6,10 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/favicon.ico', function(req, res){
+  res.sendFile(__dirname + '/favicon.ico');
+});
+
 app.get('/canvas', function(req, res){
   res.sendFile(__dirname + '/canvas.html');
 });
