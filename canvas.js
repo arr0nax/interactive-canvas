@@ -59,8 +59,8 @@ $(function () {
       console.log(messages);
     } else if (effect === 'rotate') { dorotate = true;
     } else if (effect === 'stop_rotate') { dorotate = false;
-    } else if (effect === 'gravity') { gravity = true;
-    } else if (effect === 'stop_gravity') { gravity = false;
+    } else if (effect === 'gravity') { gravity = true; dorotate = false;
+    } else if (effect === 'stop_gravity') { gravity = false; dorotate = false
     } else if (effect === 'scale_up') { (mascale < 12) ? ( mascale += .1 ) : null; console.log(mascale);
     } else if (effect === 'scale_down') { (mascale > 0.2) ? (mascale -= .1) : null;
     } else if (effect === 'speed_up') { maspeed += .1;

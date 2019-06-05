@@ -1,15 +1,18 @@
 <!doctype html>
 <html>
   <head>
-    <title>Socket.IO chat</title>
+    <title>flock time!</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="/scripts.js"></script>
     <meta name="viewport" content="width=device-width,user-scalable=no">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
   </head>
   <body>
+      <a href="/canvas">see the canvas!</a>
       <button class="big-button" id="showShapes" onclick="showShapes()">Emoji</button>
       <button class="big-button" id="showImages" onclick="showImages()">Images</button>
       <button class="big-button" id="showEffects" onclick="showEffects()">Effects</button>
@@ -59,7 +62,6 @@
       <button class="exit" onclick="exit()">back</button>
       <form class="effect-button" id="effectDuplicate" action=""><button>duplicate</button></form>
       <form class="effect-button" id="effectRotate" action=""><button>rotate</button></form>
-      <form class="effect-button" id="effectStopRotate" action=""><button>unrotate</button></form>
       <form class="effect-button" id="effectGravity" action=""><button>gravity</button></form>
       <form class="effect-button" id="effectStopGravity" action=""><button>float</button></form>
       <form class="effect-button" id="effectScaleUp" action=""><button>bigger</button></form>
